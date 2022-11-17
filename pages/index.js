@@ -1,4 +1,4 @@
-import { Text, Navbar, Link,  Container, Row, Card, Col, Image } from '@nextui-org/react';
+import { Text, Navbar, Link,  Container, Row, Card, Col, Image, Spacer } from '@nextui-org/react';
 import { AudioPlayer } from "decent-audio-player";
 
 
@@ -6,20 +6,10 @@ import { AudioPlayer } from "decent-audio-player";
 export default function Home() {
   return (
     <>
-      <div style={{
-        zIndex: -1,
-        position: "fixed",
-        width: "100vw",
-        height: "100vh"
-      }}>
-        <Image
-          //Main Background
-          src="/sound.gif"
-          alt="bg"
-          layout="fill"
-          objectFit='cover'
-        />
-        <Navbar isBordered variant="floating">
+      {/* Decent Player component with background */}
+      <Container justify="center" sm="true" >
+      {/* Navbar with socials or other info */}
+      <Navbar isBordered variant="floating">
             {/* Artist Branding */}
             <Navbar.Brand>
               <Image src="/decent.png" width={60} height={60} alt="logo"/>
@@ -58,10 +48,9 @@ export default function Home() {
             <Navbar.Toggle aria-label="toggle navigation" />
 
           </Navbar>
-      {/* Decent Player component with background */}
-      <Container justify="center" sm="true" >
+          <Spacer></Spacer>
         <Row justify='center'>
-        <Card variant='shadow' css={{ w: "380px", h: "600px", fontFamily: "Genos" }}>
+        <Card variant='shadow' css={{ w: "380px", h: "800px", fontFamily: "Genos" }}>
         <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
             <Col>
                 {/* Artist name goes here */}
@@ -113,7 +102,7 @@ export default function Home() {
     </Card>
       </Row>
       </Container>
-      </div>
+      {/* </div> */}
     </>
   )
 }
