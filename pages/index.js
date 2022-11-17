@@ -50,7 +50,7 @@ export default function Home() {
           </Navbar>
           <Spacer></Spacer>
         <Row justify='center'>
-        <Card variant='shadow' css={{ w: "380px", h: "800px", fontFamily: "Genos" }}>
+        <Card variant='shadow' css={{ w: "380px", h: "auto", fontFamily: "Genos" }}>
         <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
             <Col>
                 {/* Artist name goes here */}
